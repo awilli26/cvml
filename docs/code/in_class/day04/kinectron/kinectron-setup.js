@@ -16,8 +16,8 @@ function setup() {
 
 function draw() {
 
-    let handX = body.joints[kinectron.HANDRIGHT].depthX;
-    let handY = body.joints[kinectron.HANDRIGHT].depthY;
+    let handX = body.joints[11].depthX;
+    let handY = body.joints[11].depthY;
 
     let p = new Point(handX, handY);
     points.push(p);

@@ -21,7 +21,7 @@ function setup() {
   
   kinectron = new Kinectron("10.75.29.87");
   kinectron.makeConnection();
-  
+
   //new
   kinectron.startTrackedBodies(drawBody);
   kinectron.setKinectType("windows");
@@ -96,12 +96,13 @@ function makePink(img) {
   });
 }
 
+function drawBody() {
+
+}
+
 class Particle {
   
-  // In addition to the usual particle attributes we apply in the
-  // constructor, there is now a 'force' attribute, which is used to
-  // influence where the particle should move, and how fast it should
-  // get there.
+  
   constructor(x,y) {
     this.pos = createVector(x, y);
     this.vel = createVector(random(-20, 20), random(-20, 20));
@@ -125,11 +126,8 @@ class Particle {
   }
   
   draw() {
-        
-    // draw the particle using the image we loaded above
     fill(this.color);
     ellipse( this.pos.x, this.pos.y, this.radius);
-    
     
   }
 }
